@@ -11,14 +11,22 @@ def reverse_string(string)
 end
 
 
-def reverse_each_word(sentence)
+# def reverse_each_word(sentence)
 
+# 	words = sentence.split
+
+# 	reversed_words = []
+
+# 	words.each {|word| reversed_words << reverse_string(word)}
+
+# 	reversed_words.join(' ')
+
+# end
+
+def reverse_each_word(sentence)
 	words = sentence.split
 
-	reversed_words = []
-
-	words.each {|word| reversed_words << reverse_string(word)}
+	reversed_words = words.collect {|word| reverse_string(word)}
 
 	reversed_words.join(' ')
-
 end
